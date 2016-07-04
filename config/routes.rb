@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :student_informations
   resources :users
-  
+
   resources :widgets
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root 'welcome#index-old'
+  #root 'welcome#index-old'
+  root 'student_informations#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
