@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<section>
+<h1>Listing Student Informations</h1>
+
+<table>
+  <thead>
+    <tr id="test">
+      <th>Name</th>
+      <th>Weight</th>
+      <th>Height</th>
+      <th>Color</th>
+      <th>Gpa</th>
+      <th>Region</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_informations.each do |student_information| %>
+      <tr>
+        <td><%= student_information.Name %></td>
+        <td><%= student_information.Weight %></td>
+        <td><%= student_information.Height %></td>
+        <td><%= student_information.Color %></td>
+        <td><%= student_information.GPA %></td>
+        <td><%= student_information.Region %></td>
+        <td><%= link_to 'Edit', edit_student_information_path(student_information) %></td>
+        <td><%= link_to 'Destroy', student_information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</section>
+<br>
+<p id="bottomLink">
+<%= link_to 'New Student information', new_student_information_path %>
+<span id ="display"><%= link_to 'Display Student information', student_informations_path %>
+</p>
