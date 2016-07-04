@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :student_informations
   resources :users
+  
   resources :widgets
 
   # The priority is based upon order of creation: first created -> highest priority.
